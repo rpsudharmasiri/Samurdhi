@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Samurdhi bank</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link href="css/Montserrat.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  #portfolio{
+    background-image: url("img/calculators-nsb.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    
+
+  }
+
+    #customer{
+    background-image: url("img/mint-ui-lifestyle-xs_zoneA-1x-2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    
+
+  }
+  
+  .jumbotron {
+    background-color: #f4511e;
+    color: #79341e;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+    background-image: url("img/credit.jpg");
+    background-size: cover;
+    text-transform: uppercase;
+
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: black;
+    font-size: 50px;
+  }
+  .logo-small:hover{
+    color: #a07d29;
+    cursor: pointer;
+  }
+  .logo {
+    color: #af5337;
+    font-size: 220px;
+    padding-top: 100px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #d2d4da; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #af5337 !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #af5337;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #af5337;
+    z-index: 900;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+
+  <style type="text/css">
+  .icon-bar {
+  position: fixed;
+  top: 60%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 18px;
+  margin-top: 1px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #d2765a;
+  color: grey;
+}
+
+
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage"><b><img src="img/logo.png" width="30p" height="30px"> Samurdhi Bank</b></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#pricing">LOAN CALCULATOR</a></li>
+        <li><a href="#portfolio">PRICING</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Samurdhi Bank</h1> 
+  <p>We specialize</p> 
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Bank</h2><br>
+      
+      <p>The sender may handover a duly filled SpeedCash transfer receipt, indicating the relevant Savings Account to be debited to the branch, for the amount to be transferred. In this transaction method, while the sender is an account holder, the recipient may not be an account holder.</p>
+      <br><button class="btn btn-default btn-lg" >Get in Touch</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-piggy-bank logo" style="padding-left: 50px;"></span>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Values</h2><br>
+      <h4 class="slideanim"><strong>VISION:</strong></h4><h5> “To  be the Premier Organization in Making Poverty Free Empowered  and Prosperous Sri Lanka By 2030”</h5><br>
+      <p class="slideanim"><strong>MISSION:</strong><br> <br>Contributing to economic development through the building up of a poverty free prosperous country by empowering disadvantaged people (economically, socially, politically, physically, psychologically, legally and environmentally) and minimizing regional disparity through delivering effective, efficient, speedy and productive solutions in a people friendly manner through the satisfactory contribution of the network of Departmental, Community Based Organizations and Micro-Finance Institutions and professionals with the collaboration of the private, public, people and political sectors and local and global agencies</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-save logo-small"></span>
+      <h4>Savings</h4>
+      <p>Begin your savings journey with an Samurdhi Savings Account and manage your day-to-day transactions with ease and convenience while earning interest on your daily balance.</p>
+    </div>
+        <div class="col-sm-4">
+      <span class="glyphicon glyphicon-phone logo-small"></span>
+      <h4>Online banking</h4>
+      <p>We provide you the convenience of banking at your fingertips.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-retweet logo-small"></span>
+      <h4>Loans</h4>
+      <p>Now you no longer need to put your dreams on hold. We offer you the perfect loan packages tailored to suit your income and repayment capacity, to make them come true.</p>
+    </div>
+
+  </div>
+  <br><br>
+ 
+</div>
+
+<br>
+  <div id="customer" class="container-fluid bg-grey">
+  <h2 class="slideanim" style="color: #ebeef5;">What our customers say</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active slideanim">
+        <h4 style="color: #a6abb5;">"This Bank is the best. I am so happy with the result!"<br><span>Kalum, Vice President, Avendra</span></h4>
+      </div>
+      <div class="item">
+        <h4 style="color: #a6abb5;">"One word... WOW!!"<br><span>Sahan jayaweera, Salesman, DSI</span></h4>
+      </div>
+      <div class="item">
+        <h4 style="color: #a6abb5;">"Could I... BE any more happy with this bank?"<br><span>Sriyani wijerathna, Actor, sri lanka</span></h4>
+      </div>
+    </div>
+</div>
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Loans</h2>
+    <h4>Choose a payment plan that works for you</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Self employeement</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>8%</strong> Intrest rate</p>
+          <p><strong>6</strong> Month payment plan</p>
+          <p><strong>2</strong> Year payment plan</p>
+          <p><strong>5</strong> Year payment plan</p>
+        </div>
+        <div class="panel-footer">
+          <h3>RS: 500 000</h3>
+          <h4>Upto</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Isuru</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>10%</strong> Intrest rate</p>
+          <p><strong>6</strong> Month payment plan</p>
+          <p><strong>2</strong> Year payment plan</p>
+          <p><strong>5</strong> Year payment plan</p>
+        </div>
+        <div class="panel-footer">
+           <h3>RS: 1 000 000</h3>
+          <h4>Upto</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Home</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>8%</strong> Intrest rate</p>
+          <p><strong>6</strong> Month payment plan</p>
+          <p><strong>2</strong> Year payment plan</p>
+          <p><strong>3</strong> Year payment plan</p>
+        </div>
+        <div class="panel-footer">
+           <h3>RS: 500 000</h3>
+          <h4>Upto</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2 style="color: black;">Loan Calculator</h2><br>
+  <h4 style="color: #060000;" class="slideanim">The People's Bank Loan Calculator – for effective debt planning.
+Our free, speedy and easy-to-use loan calculator will help you estimate your loan EMIs and plan your monthly loan repayments more effectively. You can also choose to have all your loan details emailed to you.</h4>
+
+<h4 style="color: #060000;" class="slideanim">The People's Bank's Loan Calculator will present users with a list of loan products along with a short descriptor of what the loan product is about.</h4>
+<style>
+  ::placeholder{
+    color: white;
+  }
+</style>
+  <div class="row" style="background-color: #ffff; width: 80%; margin: auto; box-shadow: 2px 2px black;">
+    <div class="col-sm-4" style="background-color: #c39e2c; height: 360px; ">
+      <h4 style="text-transform: uppercase; font-weight: bold; margin-top: 20px;">Month payment</h4>
+      <input type="text" placeholder="Payment" id="total" style="background-color: transparent; border:none; text-align: center; color: white; font-size: 18px; outline: none;" readonly>
+      <h4 style="text-transform: uppercase; font-weight: bold;">Total Payment</h4>
+      <input type="text" placeholder="Payment" id="totalfull" style="background-color: transparent; border:none; text-align: center; color: white; font-size: 18px; outline: none;" readonly>
+      
+      <form>
+    </div>
+    <div class="col-sm-8 slideanim">
+      <div class="row" style="padding-top: 20px;">
+        <div class="col-sm-12 form-group">
+          <label style="float: left;">Loan type</label>
+          <select name="type" class="form-control" id="type" required>
+           <option value="8">Self employment</option>
+            <option value="8">Cultivation</option>
+            <option value="8">Fisheries</option>
+            <option value="8">Distress loan</option>
+            <option value="10">Isuru</option>
+            <option value="8">Home</option>
+          </select>
+
+<script type="text/javascript">
+$("#type").change(function () {
+    var selectedValue = $(this).val();
+    $("#rate").val($(this).find("option:selected").attr("value"))
+});
+</script>
+
+        </div>
+
+          
+          <div class="col-sm-12 form-group">
+          <label style="float: left;">Intrest rate</label>
+          <input class="form-control" id="rate" name="rate" placeholder="10%" rows="5" readonly="readonly" onkeyup="duebalance()">
+          
+       </div>
+       <div class="col-sm-12 form-group">
+          <label style="float: left;">Loan Amount</label>
+          <input class="form-control" id="Amount" name="Amount" placeholder="Amount" rows="5" onkeyup="duebalance()">
+          
+        </div>
+
+      </div>
+      <label style="float: left;">Maturity</label>
+      <input class="form-control" id="Maturity" name="Maturity" placeholder="Maturity" type="text" onkeyup="duebalance()"><br>
+    </div>
+
+
+
+    <script>
+        function duebalance()
+        {
+             var rate = document.getElementById('rate').value;
+            var amou = document.getElementById('Amount').value;
+            var Maturity = document.getElementById('Maturity').value;
+            var total = document.getElementById('total');
+            var mon=amou/Maturity;
+            var txtmonthpayment =(amou* rate)/100/Maturity+mon;
+            var txtfull =txtmonthpayment*Maturity;
+            total.value = txtmonthpayment;
+            totalfull.value = txtfull;
+
+        }
+ </script>
+
+
+  </div>
+
+
+</form>
+
+  </div>
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>  4th floor,Sethsiripaya, Battaramulla</p>
+      <p><span class="glyphicon glyphicon-phone"></span>  + 94 0112 887722 / 0112 872202 </p>
+      <p><span class="glyphicon glyphicon-envelope"></span>  email@email.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Terms of use © 2019 Bank of samurdhi. All Rights Reserved</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+<div class="icon-bar">
+  <a href="#" class="facebook" data-toggle="modal" data-target="#myModal"><i class="fa fa-user"></i></a> 
+  <a href="#" class="facebook" ><i class="fa fa-cogs"></i></a> 
+</div>
+
+
+
+<!-- The Modal -->
+  <div class="modal fade" id="myModal" style="margin-top: 100px; ">
+    <div class="modal-dialog" style=" width: 40%; height: 400px;">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header" style="background-color:#9e5b46; ">
+          <button type="button" class="close" data-dismiss="modal" style="color: white;">&times;</button>
+          <h3 class="modal-title" style="color: white; text-align-last: center;"><strong>Login type</strong></h3>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="row">
+          <div class="col-sm-4 align-middle">
+          <span class="glyphicon glyphicon-user logo-small" style="margin-left:20px; color: grey;"></span>
+          </div>
+          <div class="col-sm-8">
+            <h4><a href="login.php">Bank system login</a></h4>
+            
+          </div>
+          </div>
+
+          <div class="row">
+          <div class="col-sm-4 align-middle">
+          <span class="glyphicon glyphicon-user logo-small" style="margin-left:20px; color: grey;"></span>
+          </div>
+          <div class="col-sm-8">
+            <h4><a href="customer_login.php">User login</a></h4>
+          </div>
+          </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
